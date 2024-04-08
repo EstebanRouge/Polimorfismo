@@ -1,0 +1,54 @@
+¿Qué es el polimorfismo?
+El polimorfismo es un concepto fundamental en la programación orientada a objetos que se refiere a la capacidad de un objeto de tomar muchas formas. En otras palabras, un objeto puede comportarse de diferentes maneras dependiendo del contexto en el que se utilice.
+
+Tipos de polimorfismo:
+
+Polimorfismo de sobrecarga (Ad hoc): Se refiere a la capacidad de una misma función o método de tener múltiples formas o implementaciones, diferenciadas por la cantidad o tipo de parámetros que aceptan.
+
+Polimorfismo de sobreescritura (Subtipo): Se refiere a la capacidad de una clase derivada de proveer una implementación específica de un método que ya está definido en su clase base, permitiendo que objetos de la clase derivada se comporten como objetos de la clase base.
+
+Ejemplo de sobrecarga:
+En C#, la sobrecarga de métodos se logra al definir dos o más métodos en la misma clase con el mismo nombre pero con diferentes tipos o cantidad de parámetros. Por ejemplo:
+
+public class Calculadora
+{
+    public int Sumar(int a, int b)
+    {
+        return a + b;
+    }
+
+    public double Sumar(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+Sobreescritura de métodos:
+La sobreescritura de métodos permite a una clase derivada proporcionar una implementación específica de un método que ya está definido en su clase base. Esto permite que los objetos de la clase derivada se comporten de manera diferente a los objetos de la clase base al llamar al mismo método. Por ejemplo:
+
+public class Animal
+{
+    public virtual void HacerSonido()
+    {
+        Console.WriteLine("Sonido genérico de un animal");
+    }
+}
+
+public class Perro : Animal
+{
+    public override void HacerSonido()
+    {
+        Console.WriteLine("Guau guau");
+    }
+}
+
+Beneficios del polimorfismo en la POO:
+
+Permite la reutilización de código al escribir clases más genéricas que pueden ser utilizadas de diferentes maneras.
+Facilita la extensibilidad del código al permitir agregar nuevas funcionalidades sin modificar las clases existentes.
+Mejora la legibilidad y mantenibilidad del código al utilizar una estructura de programación más intuitiva y flexible.
+Ejemplos de polimorfismo:
+
+Un método Dibujar que puede ser implementado de forma diferente por distintas clases como Circulo, Cuadrado y Triangulo para dibujar cada una de estas figuras de manera específica.
+Un método CalcularArea que puede ser implementado de manera diferente por las clases Circulo, Rectangulo y Triangulo para calcular el área de cada figura geométrica de acuerdo a su fórmula correspondiente.
+Un método Hablar que puede ser implementado por las clases Perro, Gato y Pajaro para que cada animal emita su propio sonido característico.
